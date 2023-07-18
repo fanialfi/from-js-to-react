@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+      const app = document.getElementById("app");
+
+      // membuat elemen h1 baru
+      const heading = document.createElement("h1")
+
+      // membuat isi content 
+      const headingContent = document.createTextNode("Learn From JavaScript to Reach")
+
+      // memasukkan isi content ke element heading
+      heading.append(headingContent)
+
+      // memasukkan element heading ke DOM
+      app.append(heading);
+    </script>
+  </body>
+</html>

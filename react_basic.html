@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>   <!-- react core -->
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> <!-- provides DOM-specific methods that enable you to use React with the DOM -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- menambahkan babel untuk men compile dari JSX ke JS-->
+  <title>React Basic</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    const app = document.getElementById("app")
+
+    function Link(){
+      return (<>
+      <nav>
+          <ul>
+            <li><a href="https://www.google.com">gogle</a></li>
+            <li><a href="https://www.instagram.com/fanialfi_">instagram</a></li>
+            <li><a href="https://web.facebook.com/fanialfi14" target="_blank">facebook</a></li>
+         </ul>
+        </nav>
+      </>)
+    }
+    function Header(){
+      return (<>
+        <h1>LOGO</h1>
+        <h2>By NextJS Tutorial</h2>
+        <Link />
+      </>)
+    }
+    function Article(){
+      return (<>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, vero deleniti atque perspiciatis sequi obcaecati quaerat illum praesentium deserunt nemo voluptates est et rerum, non nobis animi nesciunt eaque reprehenderit soluta, beatae eligendi. Quae voluptatum nam quidem a tempora cum soluta possimus omnis cupiditate dolorum nesciunt facilis, blanditiis necessitatibus, voluptas beatae qui aperiam inventore quam! Laudantium iusto voluptas omnis. Quisquam obcaecati voluptatum itaque dolorem amet architecto ipsa illum nulla molestias non cumque iste tempore consequatur, perferendis voluptates et, odit enim.</p>
+      </>)
+    }
+    function Footer(){
+      return (<>
+        <p>ini adalah footer</p>
+        <Link />
+      </>)
+    }
+
+    function HomePage(){
+      return (<>
+      <Header />
+      <Article />
+      <Footer />
+      </>)
+    }
+    ReactDOM.render(<HomePage />,app)
+  </script>
+</body>
+</html>
