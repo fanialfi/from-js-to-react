@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>   <!-- react core -->
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> <!-- provides DOM-specific methods that enable you to use React with the DOM -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- menambahkan babel untuk men compile dari JSX ke JS-->
+  <title>props</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/babel">
+    const app = document.getElementById("app")
+
+    function Header({title}){
+      return <h1>{title ? title : "Hello World"}</h1>
+    }
+
+    function HomePage(){
+      const names = ["fani","alfi","dea"];
+      return (<>
+        {names.map((name) => 
+          (<li key={name}>{name}</li>)
+        )}
+        <Header title="react"/>
+        <Header/>
+      </>)
+    }
+    ReactDOM.render(<HomePage/>, app)
+  </script>
+</body>
+</html>
